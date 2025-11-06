@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(135deg, #ffd6d6, #fff0f0);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #ff3366;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 2px 2px #ffe5ec;
+  margin-bottom: 10px;
+  animation: shake 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: rotate(-2deg); }
+  100% { transform: rotate(2deg); }
+}
+
+img {
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 25px rgba(255, 51, 102, 0.3);
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+h2 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ff5c8d;
+}
+
+button {
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #e52e5c;
+  transform: scale(1.05);
+}
+
+/* lil goofy animation for background */
+@keyframes floating {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+body {
+  background-image: linear-gradient(135deg, #ffd6d6 25%, #fff0f0 25%, #fff0f0 50%, #ffd6d6 50%, #ffd6d6 75%, #fff0f0 75%, #fff0f0 100%);
+  background-size: 100px 100px;
+  animation: floating 15s linear infinite;
+}

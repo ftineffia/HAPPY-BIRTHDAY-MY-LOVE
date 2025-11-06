@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ GUESS ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1> GUESS TODAY'S DATE </H1>
+    <form id="guessForm">
+        <input type="text" id="dateGuess" placeholder="DD/MM (e.g. 04/09)">
+            <br>
+            <button type="submit">Submit</button>
+    </form>
+     <script>
+    document.getElementById("guessForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const answer = document.getElementById("dateGuess").value.trim();
+
+      // 💡 Change this to your special date!
+      const correctDate = "15/11";
+
+      if (answer === correctDate) {
+        window.location.href = "birthday.html";
+      } else {
+        window.location.href = "wrong.html";
+      }
+    });
+  </script>
+  <p>Hint: It's a <i>very</i> special day 😉</p>
+</body>
+</html>
